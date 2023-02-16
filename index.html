@@ -1,0 +1,85 @@
+<!--    "! + Tecla Tab" genera estructura basica   -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  <!-- Para que se adapte a cualquier idioma -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   <!-- Para que se adapte a cualquier navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Para que se adapte a cualquier dispositivo -->
+    <title>Calculadora de impuestos anual</title> <!-- Titulo de la pagina -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> <!-- Icono de la pagina -->
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Enlazar hoja de estilos -->
+</head>
+
+<body>
+    <header>
+        <div class="header"> <!-- Div para contener logo y titulo -->
+            <img src="img/logo-udla.svg" alt="Logo UDLA" style="width: 140;height: 40"> <!-- Logo de la UDLA -->
+            <h1>Calculadora de Impuestos Anuales</h1> <!-- Titulo de la pagina -->
+        </div>
+    </header>
+    </section>
+    <main> 
+        <div id="form"> <!-- Div para contener formulario -->
+            <form id="myForm"> <!-- Formulario -->
+                <h1><label>Calculadora</label></h1> <!-- Titulo -->
+                <div class = "writeInInputs"> <!-- Div para contener inputs -->
+                    <h3><label for="ingresos">Ingresos</label></h3> <!-- Label para ingresar ingresos -->
+                    <input id="ingresos" type="number" name="ingreso" placeholder="Ingresos percibidos netos">  <!-- Input para ingresar ingresos -->
+                    <h3><label for="gastos_generales">Gastos generales</label></h3>
+                    <input id="gastos_generales" title="Gastos generales" type="number" name="deducciones" placeholder="Gastos generales">
+                    <h3><label for="gastos_mercadería">Gastos por mercadería</label></h3>
+                    <input id="gastos_mercadería" type="number" name="deducciones" placeholder="Por mercadería ">
+                    <h3><label for="gastos_Activos_fijos">Gastos por activos fijos</label></h3>
+                    <input id="gastos_Activos_fijos"type="number" name="deducciones" placeholder="Activos fijos ">
+                    <h3><label for="gastos_Otros">Otros gastos</label></h3>
+                    <input id="gastos_Otros" type="number" name="deducciones" placeholder="Otros Gastos ">
+                    <button type="button" value="Ingresar y mostrar"onclick="clearAndShow()">Calcular</button> <!-- Boton para ingresar y mostrar -->
+                    <!-- Divs para contener variables a mostrar-->
+                    <div id="impuesto_anual_25"></div> 
+                    <div id="total_más_impuesto"></div> 
+                </div> 
+            </form>
+        </div>   
+        </section>
+        
+        <!-- Script para manejar javascript -->
+        <script type="text/javascript">
+
+            // Variables
+            var ingresos = 0;
+            var gastos_generales = 0; 
+            var gastos_mercadería = 0;
+            var gastos_Activos_fijos = 0;
+            var gastos_Otros = 0;
+            var total_gastos = 0; 
+            var resultado = 0; 
+            var impuesto_anual_25 = 0;
+            var total_más_impuesto = 0; 
+            
+            // Divs para mostrar variables
+            var impuesto_anual_a_mostrar = document.getElementById("impuesto_anual_25"); 
+            var total_mas_impuesto_a_mostrar = document.getElementById("total_más_impuesto");
+
+            // Funcion para mostrar variables
+            function clearAndShow() { // Funcion para mostrar variables
+                ingresos = +document.getElementById("ingresos").value; 
+                gastos_generales = +document.getElementById("gastos_generales").value; 
+                gastos_mercadería = +document.getElementById("gastos_mercadería").value; 
+                gastos_Activos_fijos = +document.getElementById("gastos_Activos_fijos").value; 
+                gastos_Otros = +document.getElementById("gastos_Otros").value;
+
+                total_gastos = gastos_generales + gastos_mercadería + gastos_Activos_fijos + gastos_Otros; // Suma de gastos
+                resultado = Number(ingresos) - Number(total_gastos); // Resta de ingresos y gastos
+                impuesto_anual_25 = resultado*0.25; // Impuesto anual
+                total_más_impuesto = resultado+impuesto_anual_25; // Total más impuesto
+                // Reiniciar divs
+                impuesto_anual_a_mostrar.innerHTML = ""; // Reiniciar div
+                total_mas_impuesto_a_mostrar.innerHTML = ""; // Reiniciar div
+                // Mostrar variables
+                impuesto_anual_a_mostrar.innerHTML += "El impuesto anual a pagar es: " + impuesto_anual_25 + "<br/>"; // Mostrar impuesto anual
+                total_mas_impuesto_a_mostrar.innerHTML += "El resultado más impuesto es: " + total_más_impuesto + "<br/>"; // Mostrar total más impuesto
+            }
+        </script>
+    </main>
+</body>
+</html>
