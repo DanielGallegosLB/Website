@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///C:/Users/Daniel/OneDrive%20-%20UNIVERSIDAD%20DE%20LAS%20AMERICAS/Semestre%206%202022/6%20Pr%C3%A1ctica%20Laboral%20(ESTIVAL)%20%20%20NRC%202185/Pagina%20web/Index.html", // URL of the page to open
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

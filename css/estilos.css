@@ -1,0 +1,128 @@
+*{
+    margin: 0; /* Elimina los márgenes de los elementos */
+    padding: 0; /* Elimina los espacios de los elementos */
+    box-sizing: border-box; /* Hace que el ancho y alto de los elementos sean el total de su contenido + padding + border */
+}
+
+header{
+    background-color: #ffffff; /* el color de fondo del header */
+    /* #e65c09*/
+    padding: 30px 0; /* Espacio interno del header */
+    text-align: center; /* Alinea el texto al centro */
+    color: #000000; /* Color del texto */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+}
+.header img {
+    float: left; /* Alinea la imagen a la izquierda */
+    width: 200px; /* Ancho de la imagen */
+    height: 50px; /* Alto de la imagen */
+
+}
+.header h1 {
+    position: relative; /* Posiciona el elemento */
+    top: 2px; /* Mueve el elemento hacia abajo */
+    left: -100px; /* Mueve el elemento hacia la izquierda */
+  }
+/* Ajustes Contenedor */
+body{
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+    /* #e65c09*/ 
+}
+/* Ajustes Contenedor */
+.container{
+    padding: 60px 0; /* Espacio interno del contenedor */
+    width: 90%; /* Ancho del contenedor */
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    max-height: 1000px; /* Alto máximo del contenedor */
+    margin: auto; /* Centra el contenedor */
+    overflow: hidden; /* Oculta el contenido que sobrepasa el contenedor */
+}
+/* Ajustes titulo */
+.titulo{
+    color: #333; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */ 
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-bottom: 60px; /* Espacio entre el título y el contenido */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importa la fuente Roboto desde Google Fonts */
+body{
+    text-align: center; /* Alinea el texto al centro */
+    background-color: #ffffff;  /* el color de fondo del body */
+    background-image: linear-gradient(0deg,#e65e09 50%, #F5D020 100%); /* el color de fondo del body */
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+}
+input{
+    border-top: 1px; /* Borde superior del input */
+    border-left: none;  /* Borde izquierdo del input */
+    border-right:none; /* Borde derecho del input */
+}
+#form{
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+    padding: 40px 0 100px 0;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+button{
+    background-color: #e65e09;
+    background-image: linear-gradient(90deg, #e65e09 0%, #F5D020 52%, #e65e09 90%);
+    border:none;
+    color: white;
+    padding:20px 0 20px 0;
+    border-radius: 20px;
+    width:75%;
+    height:75%;
+    text-align: center;
+    font-size:25px;
+}
+
+button:hover{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #F5D020 0%, #e65e09 52%, #F5D020 90%);
+
+}
+.writeInInputs{
+    padding-top:10px;   
+}
+.writeInInputs input{
+    width:75%;
+    border-top: 1px;
+    border-left: none;
+    border-right:none;
+    padding:15px;
+    text-align: left;
+ 
+
+}
+.writeInInputs h3{
+   text-align:left;
+   padding-left:12%;
+
+}
+.writeInInputs textarea{
+    width: 75%;
+    border-top: 1px;
+    border-left: none;
+    border-right:none;
+    padding-top:10px;   
+}
+#buttonBreak{
+    padding:75px;
+
+}
+.chooseInput{
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left:12%;
+    padding-top:10px;
+}
+select{
+    width:50%;
+    height:50px;
+    background-color:whitesmoke;
+    border-radius:5px;
+    padding:5px;
+    border:none;
+}
