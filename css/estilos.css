@@ -22,7 +22,6 @@ header{
 .header h1 {
     position: relative; /* Posiciona el elemento */
     top: 2px; /* Mueve el elemento hacia abajo */
-    left: -100px; /* Mueve el elemento hacia la izquierda */
   }
 /* Ajustes Contenedor */
 body{
@@ -44,6 +43,47 @@ body{
     font-size: 30px; /* Tamaño de la fuente */ 
     text-align: left; /* Alinea el texto a la izquierda */
     margin-bottom: 60px; /* Espacio entre el título y el contenido */
+}
+/* información de categorias*/
+#tooltip{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    top: 5px;
+}
+#tooltipText{
+    display: inline;
+    position: absolute;
+    background-color: #e65c09;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 300px;
+    max-height: 120px;
+    top: -500%;
+    left: -900%;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+#tooltip::before{
+    content: "";
+    display: inline;
+    position: absolute;
+    transform: translate(-50%);
+}
+/* Tooltip on top*/
+#tooltip:hover #tooltipText{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 70px;
+    margin-bottom: 5px;
+    visibility: visible;
+    opacity: 1;
+    display: inline;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importa la fuente Roboto desde Google Fonts */

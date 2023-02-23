@@ -23,16 +23,48 @@
             <form id="myForm"> <!-- Formulario -->
                 <h1><label>Calculadora</label></h1> <!-- Titulo -->
                 <div class = "writeInInputs"> <!-- Div para contener inputs -->
-                    <h3><label for="ingresos">Ingresos</label></h3> <!-- Label para ingresar ingresos -->
+                    <!-- Input para ingresar ingresos -->
+                    <h3><label for="ingresos">Ingresos</label></h3> 
                     <input id="ingresos" type="number" name="ingreso" placeholder="Ingresos percibidos netos">  <!-- Input para ingresar ingresos -->
+                        <!-- información sobre categoria-->
+                    <div id="tooltip">
+                        <img src="img/question mark vector icon.png" id="questionIcon" width="20" height="20"> 
+                        <span id="tooltipText">Ingresos percibidos en operaciones de ventas, exportaciones y prestaciones de servicios.</span>
+                    </div>
+                    <!-- Input para ingresar gastos generales -->
                     <h3><label for="gastos_generales">Gastos generales</label></h3>
                     <input id="gastos_generales" title="Gastos generales" type="number" name="deducciones" placeholder="Gastos generales">
+                        <!-- información sobre categoria-->
+                    <div id="tooltip">
+                        <img src="img/question mark vector icon.png" id="questionIcon" width="20" height="20"> 
+                        <span id="tooltipText">Gastos de funcionamiento, arriendo de maquinaria, electricidad, agua, gas, celulares, teléfonos, vehículos uso especifico y transportes.</span>
+                    </div>
+                    <!-- Input para ingresar gastos de mercaderia-->
                     <h3><label for="gastos_mercadería">Gastos por mercadería</label></h3>
                     <input id="gastos_mercadería" type="number" name="deducciones" placeholder="Por mercadería ">
+                        <!-- información sobre categoria-->
+                    <div id="tooltip">
+                        <img src="img/question mark vector icon.png" id="questionIcon" width="20" height="20"> 
+                        <span id="tooltipText">Gasto directo por el valor de la adquisición, transporte, derechos de internación, gastos de desaduanamiento, el flete y seguros respectivos hasta las bodegas del importador.</span>
+                    </div>
+                    <!-- Input para ingresar gastos de activos fijos-->
                     <h3><label for="gastos_Activos_fijos">Gastos por activos fijos</label></h3>
                     <input id="gastos_Activos_fijos"type="number" name="deducciones" placeholder="Activos fijos ">
+                        <!-- información sobre categoria-->
+                    <div id="tooltip">
+                        <img src="img/question mark vector icon.png" id="questionIcon" width="20" height="20"> 
+                        <span id="tooltipText">Gastos que se mantienen durante más de un año y se utilizan en la actividad de la empresa: Los terrenos, edificios, equipos, muebles y todos los costos incurridos para su adquisición e instalación.</span>
+                    </div>
+                    <!-- Input para ingresar otros gastos-->
                     <h3><label for="gastos_Otros">Otros gastos</label></h3>
                     <input id="gastos_Otros" type="number" name="deducciones" placeholder="Otros Gastos ">
+                        <!-- información sobre categoria-->
+                    <div id="tooltip">
+                        <img src="img/question mark vector icon.png" id="questionIcon" width="20" height="20"> 
+                        <span id="tooltipText">Gastos por instrumentos derivados, comisiones y otros gastos relacionados
+                            con operaciones de créditos.</span>
+                    </div>
+                    <!-- Boton para ingresar y mostrar -->
                     <button type="button" value="Ingresar y mostrar"onclick="clearAndShow()">Calcular</button> <!-- Boton para ingresar y mostrar -->
                     <!-- Divs para contener variables a mostrar-->
                     <div id="impuesto_anual_25"></div> 
